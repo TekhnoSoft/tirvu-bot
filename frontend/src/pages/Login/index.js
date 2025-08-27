@@ -133,9 +133,9 @@ const Login = () => {
               </div>
             </div>
             <div className="login-testimonial">
-              <p>"O VBOT irá revolucionar a estratégia de marketing, aumentando sua taxa de conversão."</p>
+              <p>"O TirvuBot irá revolucionar a estratégia de marketing, aumentando sua taxa de conversão."</p>
               <div className="login-testimonial-author">
-                <strong>Andréia Brito</strong> - Diretora VBOT
+                <strong>Dyllan Nicolau</strong> - Diretora TirvuBot
               </div>
             </div>
           </div>
