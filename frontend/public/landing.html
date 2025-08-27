@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VBot - Automação Inteligente de WhatsApp para Negócios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle id="loader-circle" cx="40" cy="40" r="32"></circle>
+      </svg>
+      <div class="loader-logo">
+        <img src="images/logo-icon.svg" alt="VBot Logo">
+      </div>
+    </div>
+  </div>
+
+  <!-- Cursor Follower -->
+  <div class="cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="images/logo.svg" alt="VBot Logo">
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#features" class="nav-link">Recursos</a></li>
+            <li><a href="#benefits" class="nav-link">Benefícios</a></li>
+            <li><a href="#pricing" class="nav-link">Planos</a></li>
+            <li><a href="#testimonials" class="nav-link">Depoimentos</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="header-buttons">
+          <a href="#login" class="btn btn-text btn-with-icon">
+            <span>Login</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#signup" class="btn btn-primary btn-with-icon">
+            <span>Começar Grátis</span>
+            <i class="fas fa-rocket"></i>
+          </a>
+        </div>
+        <button class="mobile-menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-right" data-aos-delay="200">
+          <div class="badge">
+            <span>Novo</span>
+            <span class="badge-dot"></span>
+            <span>Inteligência Artificial</span>
+          </div>
+          <h1>Automatize seu <span class="highlight">WhatsApp</span> e transforme leads em clientes</h1>
+          <p>Potencialize seu marketing com automação inteligente. Aumente conversões, economize tempo e escale seu atendimento com nossa plataforma alimentada por IA.</p>
+          <div class="hero-buttons">
+            <a href="#signup" class="btn btn-primary btn-large btn-with-icon">
+              <span>Começar Agora</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#demo" class="btn btn-outline btn-large btn-with-icon">
+              <i class="fas fa-play"></i>
+              <span>Ver Demonstração</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat" data-aos="fade-up" data-aos-delay="300">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number" data-count="10000">0</span><span>+</span>
+                <span class="stat-label">Usuários Ativos</span>
+              </div>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="400">
+              <div class="stat-icon">
+                <i class="fas fa-smile"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number" data-count="98">0</span><span>%</span>
+                <span class="stat-label">Satisfação</span>
+              </div>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="500">
+              <div class="stat-icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number" data-count="5000000">0</span><span>+</span>
+                <span class="stat-label">Mensagens Enviadas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+          <img src="images/hero-dashboard.png" alt="VBot Dashboard" class="main-image">
+          <div class="floating-element float-1">
+            <div class="notification-card">
+              <div class="notification-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="notification-content">
+                <h4>Conversões aumentaram 32%</h4>
+                <p>Suas campanhas estão performando bem!</p>
+              </div>
+            </div>
+          </div>
+          <div class="floating-element float-2">
+            <div class="chat-bubble">
+              <div class="chat-header">
+                <div class="chat-avatar">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="chat-name">VBot Assistant</div>
+              </div>
+              <div class="chat-message">
+                Olá! Como posso ajudar você hoje?
+              </div>
+            </div>
+          </div>
+          <div class="hero-shape-1"></div>
+          <div class="hero-shape-2"></div>
+          <div class="hero-shape-3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trusted By Section -->
+  <section class="trusted-by">
+    <div class="container">
+      <div class="section-intro" data-aos="fade-up">
+        <div class="section-intro-line"></div>
+        <h2>Utilizado por empresas de todos os tamanhos</h2>
+        <div class="section-intro-line"></div>
+      </div>
+      <div class="logos-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="logos">
+          <div class="logo-item"><img src="images/logo-company-1.svg" alt="Company 1"></div>
+          <div class="logo-item"><img src="images/logo-company-2.svg" alt="Company 2"></div>
+          <div class="logo-item"><img src="images/logo-company-3.svg" alt="Company 3"></div>
+          <div class="logo-item"><img src="images/logo-company-4.svg" alt="Company 4"></div>
+          <div class="logo-item"><img src="images/logo-company-5.svg" alt="Company 5"></div>
+          <div class="logo-item"><img src="images/logo-company-6.svg" alt="Company 6"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Recursos</div>
+        <h2>Tudo o que você precisa para <span class="highlight">automatizar</span> seu WhatsApp</h2>
+        <p>Uma plataforma completa para gerenciar, automatizar e escalar sua comunicação via WhatsApp</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Automação Inteligente</h3>
+          <p>Crie fluxos de conversação automatizados que respondem de forma natural e personalizada aos seus leads.</p>
+          <a href="#learn-more" class="feature-link">
+            <span>Saiba mais</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Dashboard Analítico</h3>
+          <p>Acompanhe métricas importantes em tempo real e tome decisões baseadas em dados concretos.</p>
+          <a href="#learn-more" class="feature-link">
+            <span>Saiba mais</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Gestão de Leads</h3>
+          <p>Organize seus contatos em grupos, segmente por interesse e acompanhe a jornada de cada lead.</p>
+          <a href="#learn-more" class="feature-link">
+            <span>Saiba mais</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h3>Campanhas Personalizadas</h3>
+          <p>Crie e agende campanhas segmentadas com mensagens personalizadas para diferentes públicos.</p>
+          <a href="#learn-more" class="feature-link">
+            <span>Saiba mais</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>IA Avançada</h3>
+          <p>Utilize inteligência artificial para criar respostas contextuais e entender as intenções dos clientes.</p>
+          <a href="#learn-more" class="feature-link">
+            <span>Saiba mais</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Integrações</h3>
+          <p>Conecte com suas ferramentas favoritas como CRM, e-commerce e sistemas de pagamento.</p>
+          <a href="#learn-more" class="feature-link">
+            <span>Saiba mais</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="features-cta" data-aos="fade-up" data-aos-delay="700">
+        <a href="#all-features" class="btn btn-outline btn-with-icon">
+          <span>Ver todos os recursos</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="features-bg-shape"></div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="benefits">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Benefícios</div>
+        <h2>Por que escolher o <span class="highlight">VBot</span>?</h2>
+        <p>Benefícios que transformam seu negócio e impulsionam seus resultados</p>
+      </div>
+      
+      <div class="benefits-wrapper">
+        <div class="benefit-item" data-aos="fade-right">
+          <div class="benefit-content">
+            <div class="benefit-tag">
+              <i class="fas fa-chart-pie"></i>
+              <span>Aumento de Conversão</span>
+            </div>
+            <h3>Aumente suas conversões em até <span class="highlight">300%</span></h3>
+            <p>Com respostas instantâneas e acompanhamento personalizado, seus leads nunca mais ficarão sem resposta. Nossa plataforma garante que cada oportunidade seja aproveitada ao máximo.</p>
+            <ul class="benefit-list">
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Respostas automáticas 24/7</span>
+              </li>
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Seguimento inteligente de leads</span>
+              </li>
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Mensagens personalizadas baseadas em comportamento</span>
+              </li>
+            </ul>
+            <a href="#conversion-case" class="btn btn-text btn-with-icon">
+              <span>Ver caso de sucesso</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="benefit-image">
+            <img src="images/benefit-conversion.png" alt="Aumento de Conversões" class="main-image">
+            <div class="image-decoration">
+              <div class="stats-card">
+                <div class="stats-header">
+                  <h4>Conversões</h4>
+                  <span class="stats-percent">+300%</span>
+                </div>
+                <div class="stats-chart">
+                  <div class="chart-bar" style="height: 30%"></div>
+                  <div class="chart-bar" style="height: 45%"></div>
+                  <div class="chart-bar" style="height: 60%"></div>
+                  <div class="chart-bar" style="height: 75%"></div>
+                  <div class="chart-bar" style="height: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="benefit-item reverse" data-aos="fade-left">
+          <div class="benefit-content">
+            <div class="benefit-tag">
+              <i class="fas fa-clock"></i>
+              <span>Economia de Tempo</span>
+            </div>
+            <h3>Economize até <span class="highlight">40 horas</span> por semana</h3>
+            <p>Automatize tarefas repetitivas e foque no que realmente importa: estratégia e crescimento. Nossa plataforma cuida das interações rotineiras enquanto sua equipe se concentra em fechar negócios.</p>
+            <ul class="benefit-list">
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Automação de respostas frequentes</span>
+              </li>
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Agendamento de campanhas</span>
+              </li>
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Qualificação automática de leads</span>
+              </li>
+            </ul>
+            <a href="#time-case" class="btn btn-text btn-with-icon">
+              <span>Ver caso de sucesso</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="benefit-image">
+            <img src="images/benefit-time.png" alt="Economia de Tempo" class="main-image">
+            <div class="image-decoration">
+              <div class="time-saved-card">
+                <div class="time-icon">
+                  <i class="fas fa-hourglass-half"></i>
+                </div>
+                <div class="time-content">
+                  <h4>Tempo Economizado</h4>
+                  <div class="time-counter">40h/semana</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="benefit-item" data-aos="fade-right">
+          <div class="benefit-content">
+            <div class="benefit-tag">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <span>Escalabilidade</span>
+            </div>
+            <h3>Escale seu atendimento <span class="highlight">sem aumentar custos</span></h3>
+            <p>Atenda centenas ou milhares de clientes simultaneamente sem precisar expandir sua equipe. Nossa plataforma escala conforme seu negócio cresce, mantendo a qualidade do atendimento.</p>
+            <ul class="benefit-list">
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Múltiplas instâncias de WhatsApp</span>
+              </li>
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Atendimento simultâneo ilimitado</span>
+              </li>
+              <li>
+                <div class="check-icon"><i class="fas fa-check"></i></div>
+                <span>Transferência inteligente para humanos quando necessário</span>
+              </li>
+            </ul>
+            <a href="#scale-case" class="btn btn-text btn-with-icon">
+              <span>Ver caso de sucesso</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="benefit-image">
+            <img src="images/benefit-scale.png" alt="Escalabilidade" class="main-image">
+            <div class="image-decoration">
+              <div class="scale-card">
+                <div class="scale-header">
+                  <h4>Atendimentos</h4>
+                  <div class="scale-badge">Ilimitado</div>
+                </div>
+                <div class="scale-users">
+                  <div class="user-icon"><i class="fas fa-user"></i></div>
+                  <div class="user-icon"><i class="fas fa-user"></i></div>
+                  <div class="user-icon"><i class="fas fa-user"></i></div>
+                  <div class="user-icon"><i class="fas fa-user"></i></div>
+                  <div class="user-icon more">+1000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Processo</div>
+        <h2>Como <span class="highlight">Funciona</span></h2>
+        <p>Comece a automatizar seu marketing em minutos com 3 passos simples</p>
+      </div>
+      
+      <div class="steps">
+        <div class="step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">
+            <span>1</span>
+          </div>
+          <div class="step-content">
+            <h3>Conecte sua conta WhatsApp</h3>
+            <p>Escaneie o QR code com seu WhatsApp Business e conecte-se à nossa plataforma de forma segura.</p>
+          </div>
+          <div class="step-image">
+            <img src="images/step-1.png" alt="Conecte WhatsApp">
+          </div>
+        </div>
+        
+        <div class="step-connector" data-aos="fade-up" data-aos-delay="150"></div>
+        
+        <div class="step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">
+            <span>2</span>
+          </div>
+          <div class="step-content">
+            <h3>Importe seus contatos</h3>
+            <p>Importe sua base de leads existente ou comece a captar novos contatos com nossas ferramentas.</p>
+          </div>
+          <div class="step-image">
+            <img src="images/step-2.png" alt="Importe contatos">
+          </div>
+        </div>
+        
+        <div class="step-connector" data-aos="fade-up" data-aos-delay="250"></div>
+        
+        <div class="step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">
+            <span>3</span>
+          </div>
+          <div class="step-content">
+            <h3>Configure suas automações</h3>
+            <p>Crie campanhas, fluxos de conversação e respostas automáticas com nossa interface intuitiva.</p>
+          </div>
+          <div class="step-image">
+            <img src="images/step-3.png" alt="Configure automações">
+          </div>
+        </div>
+      </div>
+      
+      <div class="cta-center" data-aos="fade-up" data-aos-delay="400">
+        <a href="#signup" class="btn btn-primary btn-large btn-with-icon">
+          <span>Comece Agora Mesmo</span>
+          <i class="fas fa-rocket"></i>
+        </a>
+      </div>
+    </div>
+    <div class="how-it-works-bg"></div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">Planos</div>
+        <h2>Escolha o plano ideal para o seu <span class="highlight">negócio</span></h2>
+        <p>Planos flexíveis que crescem com você, com economia em assinaturas de longo prazo</p>
+      </div>
+      
+      <div class="pricing-toggle" data-aos="fade-up" data-aos-delay="100">
+        <span class="toggle-label">Mensal</span>
+        <label class="switch">
+          <input type="checkbox" id="billing-toggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="toggle-label">Anual <span class="discount">Economize 20%</span></span>
+      </div>
+      
+      <div class="pricing-cards">
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pricing-header">
+            <h3>Starter</h3>
+            <div class="pricing-price">
+              <div class="price monthly">
+                <span class="currency">R$</span>
+                <span class="amount">97</span>
+                <span class="period">/mês</span>
+              </div>
+              <div class="price annually">
+                <span class="currency">R$</span>
+                <span class="amount">77</span>
+                <span class="period">/mês</span>
+              </div>
+            </div>
+            <p>Ideal para pequenos negócios começando com automação</p>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>1 Instância de WhatsApp</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Até 1.000 contatos</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>5.000 mensagens/mês</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Automações básicas</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Dashboard simples</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Suporte por email</span>
+              </li>
+              <li class="disabled">
+                <i class="fas fa-times"></i>
+                <span>Integrações</span>
+              </li>
+              <li class="disabled">
+                <i class="fas fa-times"></i>
+                <span>IA avançada</span>
+              </li>
+              <li class="disabled">
+                <i class="fas fa-times"></i>
+                <span>API de acesso</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <a href="#signup-starter" class="btn btn-outline btn-full btn-with-icon">
+              <span>Começar Agora</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="300">
+          <div class="popular-tag">Mais Popular</div>
+          <div class="pricing-header">
+            <h3>Professional</h3>
+            <div class="pricing-price">
+              <div class="price monthly">
+                <span class="currency">R$</span>
+                <span class="amount">197</span>
+                <span class="period">/mês</span>
+              </div>
+              <div class="price annually">
+                <span class="currency">R$</span>
+                <span class="amount">157</span>
+                <span class="period">/mês</span>
+              </div>
+            </div>
+            <p>Perfeito para empresas em crescimento com necessidades avançadas</p>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>3 Instâncias de WhatsApp</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Até 5.000 contatos</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>20.000 mensagens/mês</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Automações avançadas</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Dashboard completo</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Suporte prioritário</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>Integrações básicas</span>
+              </li>
+              <li>
+                <i class="fas fa-check"></i>
+                <span>IA para respostas</span>
+              </li>
+              <li class="disabled">
+                <i class="fas fa-times"></i>
+                <span>API de acesso</span>
+              </li>
+            </ul>
+          </div>
+          <div class="pricing-footer">
+            <a href="#signup-professional" class="btn btn-primary btn-full btn-with-icon">
+              <span>Escolher Plano</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="pricing-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="pricing-header">
+                <h3>Enterprise</h3>
+                <div class="pricing-price">
+                  <div class="price monthly">
+                    <span class="currency">R$</span>
+                    <span class="amount">397</span>
+                    <span class="period">/mês</span>
+                  </div>
+                  <div class="price annually">
+                    <span class="currency">R$</span>
+                    <span class="amount">317</span>
+                    <span class="period">/mês</span>
+                  </div>
+                </div>
+                <p>Solução completa para empresas que precisam de recursos ilimitados</p>
+              </div>
+              <div class="pricing-features">
+                <ul>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>10 Instâncias de WhatsApp</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>Contatos ilimitados</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>100.000 mensagens/mês</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>Automações personalizadas</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>Dashboard avançado</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>Suporte VIP 24/7</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>Integrações avançadas</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>IA avançada e treinável</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span>API completa</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pricing-footer">
+                <a href="#signup-enterprise" class="btn btn-outline btn-full btn-with-icon">
+                  <span>Começar Agora</span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pricing-info" data-aos="fade-up" data-aos-delay="500">
+            <div class="info-badge">
+              <i class="fas fa-shield-alt"></i>
+              <span>Teste Grátis de 14 dias</span>
+            </div>
+            <p>Todos os planos incluem período de teste gratuito. Sem compromisso, cancele a qualquer momento.</p>
+            <div class="custom-plan">
+              <p>Precisa de um plano personalizado?</p>
+              <a href="#contact" class="btn btn-text btn-with-icon">
+                <span>Fale com nossa equipe</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-bg-shape"></div>
+      </section>
+    
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="section-tag">Depoimentos</div>
+            <h2>O que nossos <span class="highlight">clientes</span> dizem</h2>
+            <p>Histórias reais de empresas que transformaram seu marketing com o VBot</p>
+          </div>
+          
+          <div class="testimonials-wrapper" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonials-slider">
+              <div class="testimonial-slide">
+                <div class="testimonial">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p>"Aumentamos nossas conversões em 250% no primeiro mês de uso. A automação inteligente do VBot fez toda a diferença no nosso processo de vendas. Conseguimos atender mais clientes com a mesma equipe."</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <img src="images/testimonial-1.jpg" alt="Carlos Silva">
+                    <div class="author-info">
+                      <h4>Carlos Silva</h4>
+                      <p>Diretor de Marketing, TechSoft</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide">
+                <div class="testimonial">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p>"A economia de tempo é impressionante. Nossa equipe agora foca apenas nos leads qualificados, enquanto o VBot cuida do processo inicial de forma eficiente. O ROI foi positivo já no primeiro mês."</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <img src="images/testimonial-2.jpg" alt="Ana Martins">
+                    <div class="author-info">
+                      <h4>Ana Martins</h4>
+                      <p>CEO, Martins Imóveis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="testimonial-slide">
+                <div class="testimonial">
+                  <div class="testimonial-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p>"Conseguimos escalar nosso atendimento de 200 para 2.000 leads por dia sem contratar ninguém a mais. A interface é intuitiva e o suporte é excelente. Recomendo para qualquer empresa que queira crescer."</p>
+                  </div>
+                  <div class="testimonial-author">
+                    <img src="images/testimonial-3.jpg" alt="Roberto Almeida">
+                    <div class="author-info">
+                      <h4>Roberto Almeida</h4>
+                      <p>Gerente Comercial, Edu Cursos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="testimonial-controls">
+              <button class="testimonial-prev">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <button class="testimonial-next">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="testimonial-brands" data-aos="fade-up" data-aos-delay="300">
+            <div class="brand-item">
+              <div class="brand-logo">
+                <img src="images/brand-1.svg" alt="Brand 1">
+              </div>
+              <div class="brand-rating">
+                <i class="fas fa-star"></i>
+                <span>4.9/5</span>
+              </div>
+            </div>
+            <div class="brand-item">
+              <div class="brand-logo">
+                <img src="images/brand-2.svg" alt="Brand 2">
+              </div>
+              <div class="brand-rating">
+                <i class="fas fa-star"></i>
+                <span>4.8/5</span>
+              </div>
+            </div>
+            <div class="brand-item">
+              <div class="brand-logo">
+                <img src="images/brand-3.svg" alt="Brand 3">
+              </div>
+              <div class="brand-rating">
+                <i class="fas fa-star"></i>
+                <span>4.7/5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- FAQ Section -->
+      <section id="faq" class="faq">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <div class="section-tag">FAQ</div>
+            <h2>Perguntas <span class="highlight">Frequentes</span></h2>
+            <p>Tudo o que você precisa saber sobre nossa plataforma</p>
+          </div>
+          
+          <div class="faq-wrapper" data-aos="fade-up" data-aos-delay="200">
+            <div class="faq-item active">
+              <div class="faq-question">
+                <h3>É necessário ter WhatsApp Business?</h3>
+                <div class="faq-toggle">
+                  <i class="fas fa-minus"></i>
+                </div>
+              </div>
+              <div class="faq-answer" style="display: block;">
+                <p>Sim, o VBot funciona com o WhatsApp Business API. Ajudamos você no processo de configuração e aprovação da sua conta. Nossa equipe oferece suporte completo durante todo o processo de integração.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Posso usar meu número de WhatsApp atual?</h3>
+                <div class="faq-toggle">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>Sim, você pode conectar seu número atual do WhatsApp Business à nossa plataforma sem perder suas conversas e contatos. O processo é simples e não afeta suas comunicações atuais.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Como faço para importar meus contatos?</h3>
+                <div class="faq-toggle">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>O VBot permite importação via planilha CSV/Excel, integração com CRMs populares, ou adição manual. O processo é simples e guiado, com validação automática para garantir que seus dados sejam importados corretamente.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>O VBot está em conformidade com a LGPD?</h3>
+                <div class="faq-toggle">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>Sim, nossa plataforma foi desenvolvida seguindo todas as diretrizes da Lei Geral de Proteção de Dados. Oferecemos ferramentas para gestão de consentimento, exclusão de dados e documentação completa sobre como seus dados são processados.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Posso cancelar a qualquer momento?</h3>
+                <div class="faq-toggle">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>Sim, não exigimos contratos de longo prazo. Você pode cancelar sua assinatura a qualquer momento, sem taxas adicionais. Caso cancele, seus dados ficam disponíveis para exportação por 30 dias.</p>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Quais integrações o VBot oferece?</h3>
+                <div class="faq-toggle">
+                  <i class="fas fa-plus"></i>
+                </div>
+              </div>
+              <div class="faq-answer">
+                <p>Integramos com diversos sistemas como Salesforce, HubSpot, RD Station, Shopify, WooCommerce, e muitos outros. Também oferecemos API para integrações personalizadas, permitindo que você conecte o VBot com qualquer sistema existente.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-more" data-aos="fade-up" data-aos-delay="300">
+            <p>Não encontrou o que procurava?</p>
+            <a href="#contact" class="btn btn-outline btn-with-icon">
+              <span>Entre em contato</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    
+      <!-- CTA Section -->
+      <section class="cta">
+        <div class="container">
+          <div class="cta-content" data-aos="fade-up">
+            <div class="cta-badge">
+              <i class="fas fa-rocket"></i>
+              <span>Comece Hoje</span>
+            </div>
+            <h2>Pronto para transformar seu marketing no <span class="highlight">WhatsApp</span>?</h2>
+            <p>Comece hoje mesmo com 14 dias grátis. Sem compromisso, sem necessidade de cartão de crédito.</p>
+            <div class="cta-buttons">
+              <a href="#signup" class="btn btn-primary btn-large btn-with-icon">
+                <span>Começar Gratuitamente</span>
+                <i class="fas fa-rocket"></i>
+              </a>
+              <a href="#demo" class="btn btn-outline btn-large btn-with-icon">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Agendar Demonstração</span>
+              </a>
+            </div>
+            <div class="cta-features">
+              <div class="cta-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Sem cartão de crédito</span>
+              </div>
+              <div class="cta-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Configuração em minutos</span>
+              </div>
+              <div class="cta-feature">
+                <i class="fas fa-check-circle"></i>
+                <span>Suporte completo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cta-bg-shape"></div>
+      </section>
+    
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-grid">
+              <div class="footer-brand">
+                <img src="images/logo-white.svg" alt="VBot Logo" class="footer-logo">
+                <p>Transformando a maneira como empresas se comunicam com seus clientes através do WhatsApp.</p>
+                <div class="social-links">
+                  <a href="#" class="social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="#" class="social-link" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="footer-links">
+                <h4>Produto</h4>
+                <ul>
+                  <li><a href="#features">Recursos</a></li>
+                  <li><a href="#pricing">Preços</a></li>
+                  <li><a href="#demo">Demonstração</a></li>
+                  <li><a href="#roadmap">Roadmap</a></li>
+                  <li><a href="#updates">Atualizações</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-links">
+                <h4>Empresa</h4>
+                <ul>
+                  <li><a href="#about">Sobre nós</a></li>
+                  <li><a href="#blog">Blog</a></li>
+                  <li><a href="#careers">Carreiras</a></li>
+                  <li><a href="#contact">Contato</a></li>
+                  <li><a href="#partners">Parceiros</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-links">
+                <h4>Suporte</h4>
+                <ul>
+                  <li><a href="#help">Central de Ajuda</a></li>
+                  <li><a href="#docs">Documentação</a></li>
+                  <li><a href="#tutorials">Tutoriais</a></li>
+                  <li><a href="#status">Status</a></li>
+                  <li><a href="#faq">FAQ</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-newsletter">
+                <h4>Inscreva-se na nossa newsletter</h4>
+                <p>Receba dicas, novidades e ofertas especiais diretamente no seu email.</p>
+                <form class="newsletter-form">
+                  <div class="form-group">
+                    <input type="email" placeholder="Seu email" required>
+                    <button type="submit" class="btn btn-primary">
+                      <i class="fas fa-paper-plane"></i>
+                    </button>
+                  </div>
+                  <div class="form-consent">
+                    <label>
+                      <input type="checkbox" required>
+                      <span>Concordo em receber comunicações de marketing</span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom-content">
+              <div class="copyright">
+                <p>&copy; 2023 VBot. Todos os direitos reservados.</p>
+              </div>
+              <div class="legal-links">
+                <a href="#terms">Termos de Uso</a>
+                <a href="#privacy">Política de Privacidade</a>
+                <a href="#cookies">Política de Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      <!-- Back to Top Button -->
+      <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+    
+      <!-- Scripts -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="script.js"></script>
+    </body>
+    </html>

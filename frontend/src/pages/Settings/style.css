@@ -1,0 +1,318 @@
+.settings-container {
+    width: 100%;
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    padding: 0px;
+  }
+  
+  .settings-header {
+    margin-bottom: 24px;
+  }
+  
+  .settings-header h1 {
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+  }
+  
+  .settings-header p {
+    color: var(--gray-600);
+    margin: 0;
+  }
+  
+  .settings-content {
+    display: flex;
+    gap: 24px;
+  }
+  
+  .settings-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+  }
+  
+  .settings-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .settings-tabs li {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+  }
+  
+  .settings-tabs li i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+    color: var(--gray-600);
+  }
+  
+  .settings-tabs li span {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+  }
+  
+  .settings-tabs li:hover {
+    background-color: var(--gray-50);
+  }
+  
+  .settings-tabs li.active {
+    background-color: var(--gray-50);
+    border-left-color: var(--primary);
+  }
+  
+  .settings-tabs li.active i,
+  .settings-tabs li.active span {
+    color: var(--primary);
+    font-weight: 500;
+  }
+  
+  .settings-main {
+    flex: 1;
+  }
+  
+  .settings-card {
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .settings-section {
+    padding: 24px;
+  }
+  
+  .settings-section h2 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  
+  .section-description {
+    color: var(--gray-600);
+    margin-bottom: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-text {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--gray-600);
+  }
+  
+  .form-actions {
+    margin-top: 32px;
+  }
+  
+  .security-additional {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gray-200);
+  }
+  
+  .security-additional h3 {
+    font-size: 1.1rem;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+  }
+  
+  .security-additional p {
+    color: var(--gray-600);
+    margin-bottom: 16px;
+  }
+  
+  /* Notificações */
+  .notification-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .notification-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--gray-50);
+    border-radius: 8px;
+  }
+  
+  .notification-info {
+    flex: 1;
+  }
+  
+  .notification-info h4 {
+    font-size: 1rem;
+    color: var(--gray-800);
+    margin: 0 0 4px 0;
+  }
+  
+  .notification-info p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    margin: 0;
+  }
+  
+  /* WhatsApp */
+  .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--gray-300);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: var(--gray-800);
+  }
+  
+  textarea.form-control {
+    resize: vertical;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--gray-800);
+  }
+  
+  .checkbox-label input {
+    margin: 0;
+  }
+  
+  /* API */
+  .api-key-section,
+  .webhook-section {
+    margin-bottom: 32px;
+  }
+  
+  .api-key-section h3,
+  .webhook-section h3 {
+    font-size: 1.1rem;
+    color: var(--gray-800);
+    margin-bottom: 16px;
+  }
+  
+  .api-key-display {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .api-key-input {
+    font-family: monospace;
+    background-color: var(--gray-50);
+  }
+  
+  .generate-key-btn {
+    margin-bottom: 16px;
+  }
+  
+  .api-key-warning {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--error);
+  }
+  
+  .api-key-warning i {
+    font-size: 1rem;
+  }
+  
+  /* Loading */
+  .settings-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--gray-200);
+    border-radius: 50%;
+    border-top-color: var(--primary);
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 992px) {
+    .settings-content {
+      flex-direction: column;
+    }
+    
+    .settings-sidebar {
+      width: 100%;
+    }
+    
+    .settings-tabs {
+      display: flex;
+      overflow-x: auto;
+    }
+    
+    .settings-tabs li {
+      flex: 1;
+      white-space: nowrap;
+      border-left: none;
+      border-bottom: 3px solid transparent;
+      justify-content: center;
+    }
+    
+    .settings-tabs li.active {
+      border-left-color: transparent;
+      border-bottom-color: var(--primary);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .settings-tabs {
+      flex-wrap: wrap;
+    }
+    
+    .settings-tabs li {
+      flex-basis: 50%;
+    }
+    
+    .notification-option {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    
+    .api-key-display {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .settings-tabs li {
+      flex-basis: 100%;
+    }
+  }

@@ -1,0 +1,12 @@
+export { default as Home } from './Home';
+export { default as Login } from './Login';
+export { default as PageNotFound } from './PageNotFound';
+export { default as Privacy } from './Privacy';
+export { default as Terms } from './Terms';
+export { default as Leads } from './Leads';
+export { default as Campanhas } from './Campanhas';
+export { default as Instancias } from './Instancias';
+export { default as Analytics } from './Analytics';
+export { default as Settings } from './Settings';
+export { default as Automacao } from './Automacao';
+export { default as Conversations } from './Conversations';

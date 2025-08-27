@@ -1,0 +1,196 @@
+/* Estilos gerais para os gráficos */
+.chart-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Gráfico de barras */
+  .chart-bars {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 180px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .chart-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .chart-bar {
+    width: 20px;
+    border-radius: var(--radius-sm);
+    margin: 0 2px;
+    transition: height 0.3s ease;
+  }
+  
+  .chart-label {
+    margin-top: var(--spacing-xs);
+    font-size: 0.75rem;
+    color: var(--gray-600);
+  }
+  
+  /* Gráfico de área */
+  .chart-area {
+    position: relative;
+    height: 150px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .chart-labels-x {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-xs);
+  }
+  
+  .chart-labels-x span {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+  }
+  
+  /* Gráfico de rosca */
+  .chart-donut {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Gráfico de pizza */
+  .chart-pie {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Legenda */
+  .chart-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+  }
+  
+  .chart-legend.vertical {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: var(--spacing-xs);
+  }
+  
+  .legend-label {
+    font-size: 0.75rem;
+    color: var(--gray-700);
+  }
+  
+  .legend-value {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+  
+  /* Resumo do gráfico */
+  .chart-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+  }
+  
+  .chart-summary-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .summary-label {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+  }
+  
+  .summary-value {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--gray-900);
+  }
+  
+  /* Estatísticas de conversão */
+  .conversion-stats {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .conversion-stat {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .conversion-label {
+    flex: 1;
+    font-size: 0.75rem;
+    color: var(--gray-700);
+  }
+  
+  .conversion-value {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--gray-900);
+    margin-right: var(--spacing-sm);
+  }
+  
+  .conversion-bar {
+    flex-basis: 100%;
+    height: 6px;
+    background-color: var(--gray-200);
+    border-radius: var(--radius-full);
+    margin-top: 4px;
+    overflow: hidden;
+  }
+  
+  .conversion-progress {
+    height: 100%;
+    border-radius: var(--radius-full);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .chart-bars {
+      height: 150px;
+    }
+    
+    .chart-bar {
+      width: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .chart-bars {
+      height: 120px;
+    }
+    
+    .chart-bar {
+      width: 12px;
+    }
+    
+    .chart-legend {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-xs);
+    }
+  }

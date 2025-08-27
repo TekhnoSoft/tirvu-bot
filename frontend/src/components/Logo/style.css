@@ -1,0 +1,67 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--gray-900);
+    letter-spacing: -0.025em;
+    position: relative;
+  }
+  
+  .logo-text {
+    position: relative;
+  }
+  
+  .logo-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    margin-left: 2px;
+  }
+  
+  .logo-tagline {
+    font-size: 0.6em;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-left: 0.5rem;
+    letter-spacing: normal;
+  }
+  
+  /* Versão light para fundos escuros */
+  .logo-light {
+    color: var(--white);
+  }
+  
+  .logo-light .logo-dot {
+    background-color: var(--white);
+  }
+  
+  /* Tamanhos */
+  .logo-small {
+    font-size: 1.25rem;
+  }
+  
+  .logo-small .logo-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .logo-medium {
+    font-size: 1.75rem;
+  }
+  
+  .logo-large {
+    font-size: 2.5rem;
+  }
+  
+  .logo-large .logo-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  @media (max-width: 576px) {
+    .logo-tagline {
+      display: none;
+    }
+  }
