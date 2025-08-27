@@ -200,7 +200,7 @@ const Login = () => {
               
               <div className="login-register">
                 <span>Não tem uma conta?</span>
-                <a target="_blank" href="https://api.whatsapp.com/send/?phone=5561981644455&text=Ol%C3%A1%20Gostaria%20do%20acesso%20ao%20VBot&type=phone_number&app_absent=0">Solicitar acesso</a>
+                <a target="_blank" href="https://api.whatsapp.com/send/?phone=61991001628&text=Ol%C3%A1%20Gostaria%20do%20acesso%20ao%20VBot&type=phone_number&app_absent=0">Solicitar acesso</a>
               </div>
             </form>
             
