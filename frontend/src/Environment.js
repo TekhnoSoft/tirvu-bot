@@ -1,4 +1,4 @@
-const DEVELOPMENT_MODE = true;
+const DEVELOPMENT_MODE = false;
 
 const Environment = {
     API_BASE: (DEVELOPMENT_MODE) ? "http://localhost:3001" : "https://others-vbot-tivru-backend.pvuzyy.easypanel.host/",
